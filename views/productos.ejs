@@ -1,0 +1,40 @@
+<%- include("template/cabecera", {tituloweb:'Productos'}) %> 
+
+    
+    <div class="container">
+<h1>Lista De Productos</h1>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre_Producto</th>
+        <th scope="col">Categoria</th>
+        <th scope="col">Proveedor</th>
+        <th scope="col">Precio_Unidad</th>
+        <th scope="col">Existencia</th>
+        <th scope="col">Acciòn</th>
+      </tr>
+    </thead>
+    <tbody>
+        <% if(arrayProductos.length > 0){ %> 
+            <% arrayProductos.forEach(producto => { %> 
+                <tr>
+                    <th scope="row"><%= producto.id %> </th>
+                    <td><%=producto.nombre_producto %></td>
+                    <td><%=producto.categoria %></td>
+                    <td><%=producto.proveedor %></td>
+                    <td><%=producto.precio %></td>
+                    <td><%=producto.existencia %></td>
+                    <td>@editar</td>
+                </tr>
+        
+            <% }) %>
+        <% } %>
+    </tbody>
+  </table>
+ 
+    </div>
+
+
+<%- include("template/footer") %> 

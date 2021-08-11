@@ -1,0 +1,11 @@
+<%- include("template/cabecera", {tituloweb:'Paina de Inicio'}) %> 
+    <div class="container">
+        <h1>Detalles de Productos</h1>
+        <% if (error){ %> 
+            <p>
+                <%= mensaje %>  
+            </p>
+        <% } %> 
+    </div>
+
+<%- include("template/footer") %> 
